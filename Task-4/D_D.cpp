@@ -1,0 +1,101 @@
+//                           At last , i'll see the light ..\x03
+//           "There are so many worlds and I have not conquered even one ..yet" 
+
+// Problem: D - D
+// Contest: Virtual Judge - Two Pointers
+// URL: https://vjudge.net/contest/766295#problem/D
+
+#include <bits/stdc++.h>
+using namespace std;
+#define vi vector<int>
+#define int long long
+#define pii pair <int,int>
+#define all(v) v.begin(), v.end()
+#define no cout << "NO\n"
+#define yes cout << "YES\n"
+template<typename T> ostream& operator<<(ostream& os, vector<T>& v) { for (auto& i : v) os << i << ' '; return os; }
+template<typename T> istream& operator>>(istream& is, vector<T>& v) { for (auto& i : v) is >> i; return is; }
+void FastIO() { cin.tie(nullptr)->sync_with_stdio(false); }
+const int MOD=1000000007; const int INF=1e18;
+int dx[] = {0, 1, 0, -1}; int dy[] = {1, 0, -1, 0};
+
+
+
+
+void avadaKedavra (){
+
+     
+}
+
+void solve(){
+   int n ; cin >> n; 
+   vi v(n) ; cin >>v;
+
+   int l = 1,r=n-1 , x1 = 0 , x2 = 0,mx = 0 , cnt = 0;
+   
+   x1=v[0];
+   while(l<=r){
+      if(x1<x2){
+         x1+=v[l];
+          l++;cnt++;
+      } if(x1>x2){
+         x2+=v[r];
+         r--; cnt++;
+      }if(x1==x2){
+         x1+=v[l];mx=cnt;
+         cnt++;l++;
+
+      }
+      
+         
+   } 
+   if(mx!=0) cout << mx+1 << "\n";
+   else cout << 0 << "\n";
+
+   
+}
+
+
+
+signed main()
+
+{   
+   FastIO();
+  
+   // freopen("bcount.in","r",stdin);
+	// freopen("bcount.out","w",stdout);
+   int t; cin >> t;
+   while (t--){
+
+     solve();
+
+   }
+   return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+.     ⢀⣤⡀⠀⋆
+⠀⠀⠀⠀⠀⣼⣿⣿⣆⠀             ⋆         ⋆
+ ⠀⋆⠀⣸⣿⣿⣿⣿⣷⣶⣶⣶⣦⡄ ⋆
+⣠⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃           ⋆
+⠻⢿⣿⣿⣿ Well, actually you are a Star.
+⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣇      ⋆
+⋆⠀⠀⢸⣿⣿⣿⣿⢿⣿⣿⣿⣿                ⋆
+⠀  ⠸⣿⣿⠟⠉⠀   ⠉⠛     ⋆   ⋆
+⋆
+
+
+
+*/
